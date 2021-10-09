@@ -1,19 +1,21 @@
 import React, { Fragment } from "react";
 import mealsImage from "../../assets/meals.jpg";
 
-import styles from "./Header.module.css";
+import classes from "./Header.module.css";
+import HeaderCartButton from "./HeaderCartButton";
 
 const Header = (props) => {
   return (
     <Fragment>
-      <header className={styles.header}>
+      <header className={classes.header}>
         <h1>React Meals</h1>
-        <button>Cart</button>
+        <HeaderCartButton>Cart</HeaderCartButton>
       </header>
-      <div className={styles['main-image']}>2021-10-07-12-24-26.png
+      <div className={classes["main-image"]}>
+        2021-10-07-12-24-26.png
         <img src={mealsImage} alt="A table full of delicious food" />
       </div>
-    </Fragment> 
+    </Fragment>
   );
 };
 
